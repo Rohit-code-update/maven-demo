@@ -97,4 +97,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: rohit0203/maven-trial:0.2
+          tags: rohit0203/maven-demo:0.2

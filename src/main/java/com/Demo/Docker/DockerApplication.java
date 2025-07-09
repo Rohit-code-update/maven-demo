@@ -15,7 +15,7 @@ public class DockerApplication {
 	}
 
 
-	@GetMapping("/")
+	@GetMapping("/greeting")
 	public String hello() {
 		return "<h1> Hello There!!! Welcome to my project :) </h1>";
 	}

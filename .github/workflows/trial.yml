@@ -66,6 +66,18 @@ jobs:
 
       - name: Run tests
         run: mvn test --file pom.xml
+      
+      - name: Save test reports as artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-reports
+          path: target/surefire-reports/*.xml  # Adjust the path if your reports are in a different location
+
+      - name: Set up Docker
+        uses: docker/setup-buildx-action@v2
+      
+      - name: Check Docker version
+        run: docker --version 
 
       # - name: Build Docker image
       #   run: |
